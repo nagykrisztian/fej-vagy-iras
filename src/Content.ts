@@ -32,7 +32,7 @@ export default class Content {
 
         res.write("2. feladat\n");
         const tipp: string = params.tipp as string;
-        res.write(`Tippeljen! (F/I)= <input type='text' value=' ' name='tipp' value=${tipp} style='max-width:100px;' onChange='this.form.submit();'>\n`);
+        res.write(`Tippeljen! (F/I)= <input type='text' value='' name='tipp' value=${tipp} style='max-width:100px;' onChange='this.form.submit();'>\n`);
         if (tipp != null) {
             if (megold.penzFeldobas == tipp) {
                 res.write("Ön eltalálta!\n");
