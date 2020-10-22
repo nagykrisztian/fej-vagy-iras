@@ -55,8 +55,8 @@ export default class Content {
 
         megold.ezerDobas();
 
-        res.write("<a href='https://github.com/nagykrisztian'>Git</a>");
-        res.write("<a href='https://github.com/nagykrisztian'>Heroku</a>");
+        res.write("<a href='https://github.com/nagykrisztian/fej-vagy-iras'>Git</a>&nbsp;&nbsp;&nbsp;");
+        res.write("<a href='https://fej-vagy-iras-13a-nk.herokuapp.com/'>Heroku</a>");
 
         // <---- Fejezd be a kódolást
 
