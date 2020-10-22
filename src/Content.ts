@@ -34,7 +34,7 @@ export default class Content {
         const tipp: string = params.tipp as string;
         res.write(`Tippeljen! (F/I)= <input type='text' value='' name='tipp' value=${tipp} style='max-width:100px;' onChange='this.form.submit();'>\n`);
         if (tipp != null) {
-            if (megold.penzFeldobas == tipp) {
+            if (megold.penzFeldobas == tipp.toUpperCase()) {
                 res.write("Ön eltalálta!\n");
             } else {
                 res.write("Ön nem találta el.\n");
