@@ -42,7 +42,7 @@ export default class Content {
         }
 
         res.write("3. feladat\n");
-        res.write(`A kísérlet ${megold.dobasok.length.toString()} dobásból állt\n`);
+        res.write(`A kísérlet ${megold.dobasokSzama} dobásból állt\n`);
 
         res.write("4. feladat\n");
         res.write(`A kísérlet során a fej relatív gyakorisága ${megold.fejGyakorisag}% volt.\n`);

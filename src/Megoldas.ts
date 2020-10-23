@@ -3,19 +3,12 @@ import fs from "fs";
 export default class Megoldas {
     private _dobasok: string[] = [];
 
-    public get dobasok(): string[] {
-        return this._dobasok;
-    }
-
-    public kiIr(): void {
-        this._dobasok.forEach(item => {
-            return item;
-        });
+    public get dobasokSzama(): number {
+        return this._dobasok.length;
     }
 
     public get penzFeldobas(): string {
         const random = +Math.random().toFixed(0);
-        // console.log(random);
         let dobas: string;
         if (random == 0) {
             dobas = "I";
@@ -32,8 +25,6 @@ export default class Megoldas {
                 cnt++;
             }
         });
-        // console.log(cnt);
-        // console.log(this._dobasok.length);
         return +((cnt / this._dobasok.length) * 100).toFixed(2);
     }
 
@@ -72,7 +63,6 @@ export default class Megoldas {
         let fffiDB: number = 0;
         for (let i = 0; i < 1000; i++) {
             t.push(this.penzFeldobas + this.penzFeldobas + this.penzFeldobas + this.penzFeldobas);
-            console.log(t[i]);
         }
         t.forEach(x => {
             if (x == "FFFF") {
