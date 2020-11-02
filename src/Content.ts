@@ -55,7 +55,7 @@ export default class Content {
 
         megold.ezerDobas();
         
-        res.write("7. feladat\n");
+        res.write("7. feladat (olvashatóság miatt 100 karakterenként tördelve)\n");
         res.write(`FFFF: ${megold.ezerDobasKepernyoreIr[0]}, FFFI: ${megold.ezerDobasKepernyoreIr[1]}\r\n`);
         res.write(`${megold.ezerDobasKepernyoreIr[2]}\n`);
 
