@@ -80,7 +80,7 @@ export default class Megoldas {
     public get ezerDobasKepernyoreIr(): string[] {
         fs.writeFileSync("dobasok.txt", `FFFF: ${this._ffffDB}, FFFI: ${this._fffiDB}\r\n`);
         fs.appendFileSync("dobasok.txt", this._t.join(" "));
-        return [this._ffffDB.toString(), this._fffiDB.toString(), this._t.join(" ").replace(/(.{100})/g, "$1\n")];
+        return [this._ffffDB.toString(), this._fffiDB.toString(), this._t.join(" ").replace(/(.{100})/g, "$1\n")]; //kepernyore iras miatt 100 karakterenkent tordelve
     }
 
 
