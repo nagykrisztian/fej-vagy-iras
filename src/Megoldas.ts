@@ -57,23 +57,32 @@ export default class Megoldas {
         return [legtobbF, kezdoIndex];
     }
 
+    private _ffffDB: number = 0;
+    private _fffiDB: number = 0;
+    private _t: string[] = [];
+
+
     public ezerDobas(): void {
-        const t: string[] = [];
-        let ffffDB: number = 0;
-        let fffiDB: number = 0;
+
         for (let i = 0; i < 1000; i++) {
-            t.push(this.penzFeldobas + this.penzFeldobas + this.penzFeldobas + this.penzFeldobas);
+            this._t.push(this.penzFeldobas + this.penzFeldobas + this.penzFeldobas + this.penzFeldobas);
         }
-        t.forEach(x => {
+        this._t.forEach(x => {
             if (x == "FFFF") {
-                ffffDB++;
+                this._ffffDB++;
             } else if (x == "FFFI") {
-                fffiDB++;
+                this._fffiDB++;
             }
         });
-        fs.writeFileSync("dobasok.txt", `FFFF: ${ffffDB}, FFFI: ${fffiDB}\r\n`);
-        fs.appendFileSync("dobasok.txt", t.join(" "));
+
     }
+
+    public get ezerDobasKepernyoreIr(): string[] {
+        fs.writeFileSync("dobasok.txt", `FFFF: ${this._ffffDB}, FFFI: ${this._fffiDB}\r\n`);
+        fs.appendFileSync("dobasok.txt", this._t.join(" "));
+        return [this._ffffDB.toString(), this._fffiDB.toString(), this._t.join(" ").replace(/(.{100})/g, "$1\n")];
+    }
+
 
     constructor() {
         fs.readFileSync("kiserlet.txt")
