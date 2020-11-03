@@ -54,11 +54,10 @@ export default class Content {
         res.write(`A leghosszabb tisztafej sorozat ${megold.fejSorozat[0]} tagból áll, kezdete a(z) ${megold.fejSorozat[1]}. dobás.\n`);
 
         megold.ezerDobas();
-        
+
         res.write("7. feladat (olvashatóság miatt 100 karakterenként tördelve)\n");
         res.write(`FFFF: ${megold.ezerDobasKepernyoreIr[0]}, FFFI: ${megold.ezerDobasKepernyoreIr[1]}\r\n`);
         res.write(`${megold.ezerDobasKepernyoreIr[2]}\n`);
-
 
         res.write("<a href='https://github.com/nagykrisztian/fej-vagy-iras'>Git</a>&nbsp;&nbsp;&nbsp;");
         res.write("<a href='https://fej-vagy-iras-13a-nk.herokuapp.com/'>Heroku</a>");

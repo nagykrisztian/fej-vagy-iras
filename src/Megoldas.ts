@@ -61,9 +61,7 @@ export default class Megoldas {
     private _fffiDB: number = 0;
     private _t: string[] = [];
 
-
     public ezerDobas(): void {
-
         for (let i = 0; i < 1000; i++) {
             this._t.push(this.penzFeldobas + this.penzFeldobas + this.penzFeldobas + this.penzFeldobas);
         }
@@ -74,7 +72,6 @@ export default class Megoldas {
                 this._fffiDB++;
             }
         });
-
     }
 
     public get ezerDobasKepernyoreIr(): string[] {
@@ -82,7 +79,6 @@ export default class Megoldas {
         fs.appendFileSync("dobasok.txt", this._t.join(" "));
         return [this._ffffDB.toString(), this._fffiDB.toString(), this._t.join(" ").replace(/(.{100})/g, "$1\n")]; //kepernyore iras miatt 100 karakterenkent tordelve
     }
-
 
     constructor() {
         fs.readFileSync("kiserlet.txt")
