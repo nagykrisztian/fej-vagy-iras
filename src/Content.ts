@@ -59,8 +59,8 @@ export default class Content {
         res.write(`FFFF: ${megold.ezerDobasKepernyoreIr[0]}, FFFI: ${megold.ezerDobasKepernyoreIr[1]}\r\n`);
         res.write(`${megold.ezerDobasKepernyoreIr[2]}\n`);
 
-        res.write("<a href='https://github.com/nagykrisztian/fej-vagy-iras'>Git</a>&nbsp;&nbsp;&nbsp;");
-        res.write("<a href='https://fej-vagy-iras-13a-nk.herokuapp.com/'>Heroku</a>");
+        res.write("<a href='https://github.com/nagykrisztian/fej-vagy-iras' target='_blank'>Git</a>&nbsp;&nbsp;&nbsp;");
+        res.write("<a href='https://fej-vagy-iras-13a-nk.herokuapp.com/' target='_blank'>Heroku</a>");
 
         // <---- Fejezd be a kódolást
 
